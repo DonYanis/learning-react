@@ -1,0 +1,132 @@
+body {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  height: 70px;
+  display: flex;
+  background-color: rgb(250, 250, 247);
+  align-items: center;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img{
+  width: 100px;
+  padding-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ccontainer--text {
+  max-width: 200px;
+}
+
+.container img {
+  width: auto;
+  max-width: 500px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+@media (max-width:740px) {
+  .container {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (max-width:300px) {
+  .container img {
+    width: 200px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:525px) {
+  .container img {
+    max-width: 300px;
+  }
+}
+
+.container--title{
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  padding: 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card--badge {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  background-color: rgba(255, 255,255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 80px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.card--image img {
+  width: 100%;
+  height: 270px;
+  border-radius: 10px;
+}
+
+.card--stats img {
+  width: 15px;
+  padding-right: 2px;
+}
+
+.gray {
+  color: gray;
+}
+
+.card p {
+  width: 95%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.card-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s;
+}
