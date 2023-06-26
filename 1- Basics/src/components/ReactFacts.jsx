@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function ReactFacts(){
+export default function ReactFacts(props){
     return (
-      <main className='container'>
+      <main className={props.lightMode ? "container light" : "container"}>
         <h1 className='title'>Fun Facts About React</h1>
         <ul className='facts'>
           <li>Was first released in 2013</li>

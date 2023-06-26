@@ -3,20 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client'
 
 import './styles/index.css';
-import Header from './components/Header'
-import ReactFacts from './components/ReactFacts'
-import Footer from './components/Footer'
+import App from './App';
 
-
-function Page(){
-  return (
-    <div>
-      <Header/>
-      <ReactFacts/>
-      <Footer/>
-    </div>  
-  ) 
-}
 
 //React @17 :
 //ReactDOM.render(<Page/>, document.getElementById('root'))
@@ -25,5 +13,5 @@ function Page(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <Page/>
+  <App/>
 );
