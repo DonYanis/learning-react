@@ -1,8 +1,15 @@
 import React from "react";
+import { useTheme } from "../contexts/ThemeContext";
 
-export default function ReactFacts(props){
+
+export default function ReactFacts(){
+
+  const theme = useTheme()
+
+  const className = theme ? "container" : "container light"
+
     return (
-      <main className={props.lightMode ? "container light" : "container"}>
+      <main className={className}>
         <h1 className='title'>Fun Facts About React</h1>
         <ul className='facts'>
           <li>Was first released in 2013</li>

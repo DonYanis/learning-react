@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header from './components/Header'
 import ReactFacts from './components/ReactFacts'
-
+import { ThemeContextProvider } from './contexts/ThemeContext';
 
 export default function App(){
 
-    const [lightMode, setLightMode] = useState(false)
-
-    function toggleMode() {
-        setLightMode(prev => !prev)
-    }
-
   return (
-    <div>
-      <Header lightMode = {lightMode} toggle = {toggleMode}/>
-      <ReactFacts lightMode = {lightMode}/>
-    </div>  
+    <ThemeContextProvider>
+      <Header />
+      <ReactFacts />
+    </ThemeContextProvider>  
   ) 
 }
