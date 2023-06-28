@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(35 37 44);
+  color: rgb(195, 199, 202);
+}
+ 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+  color: rgb(195, 199, 202);
+}
+
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+  
+}
+
+.navbar .links h3{
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+.btn {
+  text-decoration: none;
+  color: rgb(195, 199, 202);
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0px 2px rgb(219 209 209 / 50%);
+  transition: 0.5s ease-in-out;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container--title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(195, 199, 202);;
+}
+
+.container p {
+  max-width: 60%;
+  text-align: justify;
+}
+
+.products {
+  display: grid;
+  grid-template: 200px 200px / 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.product {
+  width: 150px;
+  height: 200px;
+  border: 1px solid rgb(110, 110, 110);
+  border-radius: 5px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  box-shadow: 0px 2px rgb(219 209 209 / 50%);
+  transition: 0.5s ease-in-out;
+}
+
+.product:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+@media (max-width:512px) {
+  .products {
+    grid-template: 200px 200px / 1fr 1fr ;
+  }
+
+  .login-form {
+    max-width: 400px;
+  }
+}
+
+@media (max-width:410px) {
+
+  .login-form {
+    max-width: 350px;
+  }
+
+  .navbar h1 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #464746;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+  width: 500px;
+  height: 500px;
+}
+
+.login-form input {
+  width: 300px;
+  height: 30px;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.submit {
+  width: 80px;
+  height: 30px;
+  color: #ecf1ec;
+  border: 1px solid #464746;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+  background-color: #464746;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+}
